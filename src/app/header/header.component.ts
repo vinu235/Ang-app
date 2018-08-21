@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  data = {};
+  data = [];
    
-  getData(data){
-    console.log(this.data);
+  addData(data){
+    this.data.push(data);
+  }
+
+  removeData(){
+    return this.data.pop();
   }
 }

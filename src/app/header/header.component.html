@@ -1,12 +1,10 @@
 <h3>List Data</h3>
 <hr>
-Name : <input type="text" [(ngModel)]="data.name" class="form-control"><br>
-Age : <input type="text" [(ngModel)]="data.age"><br>
-Address : <input type="text" [(ngModel)]="data.address"><br>
-<!-- <input type="button" (click)="getData(data);" value="Click">
-<ul>
-    <li>{{ data.name }}</li>
-    <li>{{ data.age }}</li>
-    <li><a href="#">{{ data.email }}</a></li>
+Name : <input type="text" [(ngModel)]="data.name" class="form-control col-md-4">
+Age : <input type="text" [(ngModel)]="data.age" class="form-control col-md-4">
+Address : <input type="text" [(ngModel)]="data.address" class="form-control col-md-4"><br>
+<input type="button" (click)="addData();" value="Add Info" class="btn btn-default">
+<hr>
+<ul *ngIf="data !== {}">
+    <li *ngFor="let d of data">{{ data.name }} - {{ data.age }} - {{ data.address }} <input type="button" value="Remove" (click)="removeData(data);"></li>
 </ul>
- -->
